@@ -1,20 +1,26 @@
 ---
-name: Feature request
+name: ✨ Feature request
 about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
 ---
+<!--- Verify first that your feature was not already discussed on GitHub -->
+<!--- Complete *all* sections as described, this form is processed automatically -->
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+##### SUMMARY
+<!--- Describe the new feature/improvement briefly below -->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+##### ISSUE TYPE
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+- Feature Idea
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+##### COMPONENT NAME
+<!--- Write the short name of the module, plugin, task or feature below, use your best guess if unsure -->
+
+##### ADDITIONAL INFORMATION
+<!--- Describe how the feature would be used, why it is needed and what it would solve -->
+
+<!--- Paste example playbooks or commands between quotes below -->
+```yaml
+
+```
+
+<!--- HINT: You can also paste gist.github.com links for larger files -->
