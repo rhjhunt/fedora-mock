@@ -1,7 +1,7 @@
-FROM registry.fedoraproject.org/fedora:33
+FROM registry.fedoraproject.org/fedora:34
 
 LABEL   name="fedora-mock" \
-        version="1.2" \
+        version="1.3" \
         architecture="x86_64" \
         vcs-type="git" \
         vcs-url="https://github.com/rhjhunt/fedora-mock" \
