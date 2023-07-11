@@ -17,7 +17,7 @@ You can also build your own:
 ```terminal
 git clone https://github.com/rhjhunt/fedora-mock.git
 cd fedora-mock
-buildah bud -t rhjhunt/fedora-mock .
+buildah bud -t fedora-mock .
 ```
 
 ## Run

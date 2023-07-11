@@ -1,7 +1,7 @@
-FROM registry.fedoraproject.org/fedora:35
+FROM registry.fedoraproject.org/fedora-minimal:38
 
 LABEL   name="fedora-mock" \
-        version="1.7" \
+        version="2.0.1" \
         architecture="x86_64" \
         vcs-type="git" \
         vcs-url="https://github.com/rhjhunt/fedora-mock" \
@@ -10,9 +10,9 @@ LABEL   name="fedora-mock" \
         maintainer="Jacob Hunt <jhunt@redhat.com>" \
         run="podman run --rm --privileged -v $HOME/mock/etc:/etc/mock:z -v $HOME/mock/var:/var/lib/mock:z -v $(pwd):/workdir rhjhunt/fedora-mock"
 
-RUN dnf -y --setopt=tsflags='' update && \
-    dnf -y --setopt=tsflags='' install rpmdevtools mock mock-core-configs && \
-    dnf clean all && \
+RUN microdnf -y update --nodocs --setopt install_weak_deps=0 && \
+    microdnf -y install --nodocs --setopt install_weak_deps=0 rpmdevtools mock mock-core-configs && \
+    microdnf clean all --enablerepo="*" && \
     mv /etc/mock /etc/mock-default && \
     mkdir /etc/mock && \
     useradd -c 'Mock Build' -G mock mockbuild && \
